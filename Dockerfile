@@ -1,4 +1,4 @@
-FROM openmicroscopy/ome-files-py
+FROM openmicroscopy/ome-files-py:0.1.0
 
 RUN pip install matplotlib jupyter
 
