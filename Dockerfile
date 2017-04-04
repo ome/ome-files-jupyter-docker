@@ -12,6 +12,8 @@ USER jupyter
 ENV HOME /home/jupyter
 RUN mkdir -p -m 700 ${HOME}/.jupyter/ && \
   echo "c.NotebookApp.ip = '*'" >> ${HOME}/.jupyter/jupyter_notebook_config.py
+RUN mkdir -p -m 700 ${HOME}/notebooks
+RUN cp /git/ome-files-py/examples/*.ipynb ${HOME}/notebooks
 
 WORKDIR ${HOME}/notebooks
 
